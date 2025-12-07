@@ -34,4 +34,6 @@ We can also create a map within sentinel to better visualize the analyitics of o
 
 <img width="740" height="398" alt="image" src="https://github.com/user-attachments/assets/910ced6e-90c5-45e5-b065-10c10f95db4a" />
 
-If we really wanted to finalize out SOC here we could set up alerts and incedents within sentinel. However this lab was simply to assess the webtraffic, we dont really have a need for that functionality. 
+This honeypot project successfully demonstrated how quickly and aggressively exposed cloud resources are targeted once placed on the public internet. By intentionally disabling defensive controls and connecting the VM to Microsoft Sentinel and a Log Analytics Workspace, I was able to capture real attack traffic within minutes of deployment—ranging from brute-force login attempts to repeated probing from various global IP addresses. 
+
+Overall, this lab highlighted the importance of proper network security configuration, threat monitoring, and SIEM visibility in modern cloud environments. Even a single misconfigured resource can become an immediate target. By observing these attacks firsthand, this project reinforces why layered security, continuous monitoring, and strict access controls are critical for protecting real-world systems.

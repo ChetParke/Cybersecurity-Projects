@@ -5,7 +5,7 @@ mismanaged service ports that support vulnerable operations can easily become at
 
 Devices used 
 - Windows Server 2022 Domain Controller / Domain Member Server
-- Kali Purple 2023 Linix Workstation
+- Kali Purple 2023 Linux Workstation
 
 ### Discover Unnecessary Open Ports
 

@@ -1,4 +1,4 @@
-# Using Nmap to find and resolve potentially vulnerable service ports
+# Port Security using Nmap & Kali Linux
 
 Within this lab I will be using Nmap and Kali Purple to secure vulnerable service ports. Service ports are crucial for communication between hosts, so having them open is essential for routine network operations. However, 
 mismanaged service ports that support vulnerable operations can easily become attack vectors for malicous threat actors. This lab will deomstrate how to close unnessacarily open service ports for device and network hardening.

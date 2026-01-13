@@ -27,11 +27,11 @@ Now I can view all of the logs from our virtual machine directly in our Log Anal
 I opened the VM to the internet about 10 minutes ago and their is already a wide range of login attemps and brute force tools attacking us. Non of the attempted login below are from me.
 <img width="1520" height="824" alt="image" src="https://github.com/user-attachments/assets/10f414f7-19db-44c5-876c-7b94949f572c" />
 
-A quick lookup of their IP address and we can see that we are currently being attacked from Tijuana, Mexico.
+A quick lookup of their IP address and we can see that we are currently being attacked from Tijuana, Mexico and various countries in South America.
 
-I will now map all of the IPs with geolocation to see where the attacks are coming from. Let create a new sentinel watchlist to do so. I will put the source of the watchlist to an excel file that has locational IP data and create. After it is created we can query the log analytics workspace with out new watchlist to see the attacker geolocations.
+I will now map all of the IPs with geolocation to see where the attacks are coming from. Let create a new sentinel watchlist to do so. I will set the source of the watchlist to an excel file that has locational IP data that we can utilize for our map. After it is created we can query the log analytics workspace with the new watchlist to see the attacker geolocations.
 
-We can also create a map within sentinel to better visualize the analyitics of our SIEM. We will create a new workbook to do so. Within the last 5 minutes we can see the below activity for the americas.
+We can also create a map within sentinel to better visualize the analyitics of our SIEM. I will create a new workbook to utilize this functionality. Within the last 5 minutes we can see the below activity from South America.
 
 <img width="740" height="398" alt="image" src="https://github.com/user-attachments/assets/910ced6e-90c5-45e5-b065-10c10f95db4a" />
 

@@ -12,6 +12,7 @@ After I had updated the rules of the resource group I now needed to disable any 
 <img width="382" height="445" alt="image" src="https://github.com/user-attachments/assets/a541ae91-cec8-452c-8ba6-8712c14aa763" />
 
 Now that I created an vulnerable enviroment I needed to ensure that it could be reached. A simple ping in powershell will confirm... and boom we are able to reach the VM.
+
 <img width="440" height="171" alt="image" src="https://github.com/user-attachments/assets/bb402d2b-f326-4d20-95cc-4a7148989c5a" />
 
 We have successfully created a vulnerable VM, now I will link Azure to the miscrosoft event viewer to keep track of any and all activity on the machine.

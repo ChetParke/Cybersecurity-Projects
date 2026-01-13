@@ -14,7 +14,7 @@ After some analysis I conclude that it is just standard SSH traffic with a few n
 
 The second task we are to complete is finding sensitive data within a user session value. 
 
-We are given the use session value of SES:53924537412317063\N7366400\N01031988\N.
+We are given the user session value of SES:53924537412317063\N7366400\N01031988\N.
 
 I conclude that the sensitive user data leaked within the session value is at the end of the string. The 'N01031988' portion, since the 10/31/1988 align perfectly with a date... I conclude that it is the users birthday.
 

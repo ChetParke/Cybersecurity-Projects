@@ -51,7 +51,7 @@ Conenction failed! As expected out new firewall rule is working...
 
 Now it is time for the outbound rules of the firewall.
 
-Within the Windows Defender Firewall I create a new rule for 445. Blocking the traffic.
+Within the Windows Defender Firewall I create a new rule for 445. Blocking the traffic as is it very bad practice to leave SMB opne and facing the internet.
 
 <img width="841" height="461" alt="image" src="https://github.com/user-attachments/assets/1e42ef1b-afd9-438f-a97e-d1ecfc19c547" />
 
@@ -69,8 +69,8 @@ This rule was created simply to show how an outbound rule would be created and t
 
 Windows Firewall supports a logging feature that describes how the firewall processes different types of traffic. The collected logs provide important information such as date or time, source or destination IP addresses, port numbers, and protocols.
 
-Firewall logging is useful for verifying that the newly added firewall rule works properly, or to troubleshoot them if the rules do not work as expected. The logs can assist in identifying unusual activity such as repeated failed attempts to access the firewall or an internal computer. Similarly, suspicious and repetitive outbound connections coming from internal servers, like web servers, could be an indication that an intruder is using your system to hack into other corporate networks. Note that the firewall logs are not fully detailed and do not provide conclusive information needed to track down the external source activity.
-
+Firewall logging is useful for verifying that the newly added firewall rule works properly, or to troubleshoot them if the rules do not work as expected. 
+Once rules are functioning properly, logs become an essential point of network sercurity. Used to find and review suspicous traffic flow and where / who it is coming from.
 **In this step of the lab I will install and FTP server and configure an FTP site to have ensure it can be monitored via wireshark**
 
 Install the FTP server using powerShell **Install-WindowsFeature Web-Ftp-Server -IncludeManagementTools**

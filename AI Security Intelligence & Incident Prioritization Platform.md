@@ -1,26 +1,16 @@
-# AI Security Intelligence & Incident Prioritization Platform
+# AI Security Intelligence Platform
 
-## Overview
+An AI-powered security operations platform that aggregates alerts from multiple security products, enriches findings with external threat intelligence, removes duplicate events, and automatically validates indicators of compromise (IOCs) across enterprise environments. The platform is designed to help security teams prioritize investigations while providing tailored reporting for both technical and executive stakeholders.
 
-Designed and developed an AI-powered security intelligence platform to aggregate, correlate, and prioritize security findings from multiple internal security tools and external threat intelligence sources. The platform reduced manual analysis by enriching alerts, eliminating duplicate findings, validating intelligence, and automatically searching the environment for indicators of compromise (IOCs).
-
-The system was designed to support security teams with varying technical backgrounds by generating role-specific summaries and recommendations, allowing executives and technical responders to consume the same intelligence in different formats.
+> **Note:** This repository represents an independent implementation of an AI-assisted security operations workflow intended for learning and portfolio purposes.
 
 ---
 
-## Objectives
+## Features
 
-* Consolidate security data into a single analysis pipeline.
-* Reduce analyst fatigue through automated correlation and deduplication.
-* Enrich alerts with contextual threat intelligence.
-* Automatically search enterprise environments for newly identified IOCs.
-* Generate accurate, role-specific security reports.
+### Multi-Source Security Data Ingestion
 
----
-
-## Data Sources
-
-### Security Platforms
+Collects and normalizes security data from multiple enterprise security platforms, including:
 
 * Wiz
 * SentinelOne
@@ -28,94 +18,108 @@ The system was designed to support security teams with varying technical backgro
 * Tanium
 * Obsidian Security
 
-### External Threat Intelligence
+External threat intelligence sources include:
 
 * AbuseIPDB
 * STIX threat intelligence feeds
-* HackerOne disclosures
-* Public security news and vulnerability feeds
+* Public vulnerability disclosures
+* HackerOne reports
+* Security news feeds
 
 ---
 
-## Pipeline
+## AI Correlation & Deduplication
 
-### 1. Data Ingestion
+The platform uses lightweight language models to:
 
-Security findings, alerts, vulnerability data, and threat intelligence were continuously collected through platform APIs and normalized into a common format.
+* Correlate related alerts
+* Remove duplicate findings across tools
+* Group incidents by affected assets
+* Prioritize investigations based on overall risk
 
----
-
-### 2. AI Correlation & Deduplication
-
-Lower-cost Claude models performed the initial analysis by:
-
-* Removing duplicate findings across multiple platforms
-* Correlating related alerts
-* Grouping incidents by affected assets
-* Prioritizing findings based on overall risk
-
-This reduced duplicate investigations while lowering AI inference costs.
+This reduces alert fatigue while preserving important context from each security platform.
 
 ---
 
-### 3. Threat Enrichment
+## Threat Intelligence Enrichment
 
-Each finding was enriched using internal telemetry and external intelligence sources, including:
+Each finding is enriched with additional intelligence, including:
 
 * Known malicious IP addresses
-* Vulnerability intelligence
+* CVEs and vulnerability intelligence
 * Threat actor activity
 * Public exploit information
-* Newly published Indicators of Compromise (IOCs)
+* IOC context
+* Asset exposure
 
 ---
 
-### 4. Automated IOC Validation
+## Automated IOC Validation
 
-After enrichment, the platform extracted all discovered IOCs and automatically queried enterprise security tools to determine whether they existed within the environment.
+After enrichment, the platform extracts Indicators of Compromise (IOCs) from external intelligence sources and automatically validates them against connected security platforms.
 
-Examples included:
+Supported IOC types include:
 
 * IP addresses
 * Domains
 * File hashes
 * Software packages
-* Other observable indicators
+* URLs
+* Additional observable indicators
 
-This enabled security teams to rapidly determine whether newly published threats affected the organization.
-
----
-
-### 5. AI Report Generation
-
-A consolidated incident report was generated with multiple presentation layers based on the viewer.
-
-Examples included:
-
-* Executive summaries for leadership
-* Operational dashboards for Security Operations
-* Technical remediation guidance for Security Engineering
-* Vulnerability prioritization for Application Security
-
-Each audience received the same underlying intelligence tailored to its level of technical detail.
+This enables rapid identification of threats that may already exist within the environment.
 
 ---
 
-### 6. AI Quality Assurance
+## Intelligent Report Generation
 
-Before publication, a higher-capability language model performed a final review to:
+The platform generates audience-specific summaries from a single investigation.
+
+Examples include:
+
+### Executive View
+
+* High-level business impact
+* Organizational risk
+* Recommended actions
+* Current security posture
+
+### Security Operations
+
+* Prioritized investigations
+* IOC matches
+* Alert timelines
+* Recommended response actions
+
+### Security Engineering
+
+* Technical findings
+* Detection opportunities
+* Infrastructure impact
+* Suggested mitigations
+
+### Application Security
+
+* Vulnerability prioritization
+* Affected applications
+* Risk scoring
+* Remediation guidance
+
+---
+
+## AI Quality Assurance
+
+Before reports are published, a more capable language model performs a final validation pass to:
 
 * Verify factual consistency
 * Reduce hallucinations
-* Improve clarity
-* Ensure report quality
-* Validate prioritization logic
-
-This final validation step increased confidence in AI-generated recommendations before distribution.
+* Improve report clarity
+* Validate prioritization
+* Ensure accurate recommendations
 
 ---
 
-## Technologies
+## Technology Stack
 
 ### Security Platforms
 
@@ -130,27 +134,33 @@ This final validation step increased confidence in AI-generated recommendations 
 * AbuseIPDB
 * STIX
 * HackerOne
-* Public security intelligence feeds
+* Public security feeds
 
-### AI
+### AI Capabilities
 
-* Multi-stage LLM pipeline
-* AI-powered enrichment
-* Intelligent deduplication
+* Alert correlation
+* Threat enrichment
+* IOC extraction
 * Risk prioritization
-* Role-based report generation
+* Role-based reporting
 * AI-assisted validation
 
 ---
 
-## Impact
+## Future Enhancements
 
-The platform served multiple cybersecurity stakeholders across the organization, including:
+* MITRE ATT&CK mapping
+* Sigma rule generation
+* YARA rule recommendations
+* CVE correlation
+* Threat actor profiling
+* SOAR integrations
+* Interactive investigation dashboard
+* Automated remediation workflows
 
-* Security Operations
-* Application Security
-* Security Engineering
-* Engineering Leadership
-* Executive Leadership
+---
 
-By consolidating data from numerous security platforms into a single workflow, the system reduced manual investigation effort, improved vulnerability prioritization, accelerated threat validation, and delivered actionable intelligence tailored to each audience.
+## Goal
+
+Modern security teams receive thousands of alerts from dozens of tools every day. This project demonstrates how AI can consolidate, enrich, validate, and prioritize security findings into a single workflow, allowing analysts and leadership to make faster, more informed decisions while reducing manual investigation effort.
+

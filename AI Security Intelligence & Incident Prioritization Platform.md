@@ -2,7 +2,6 @@
 
 An AI-powered security operations platform that aggregates alerts from multiple security products, enriches findings with external threat intelligence, removes duplicate events, and automatically validates indicators of compromise (IOCs) across enterprise environments. The platform is designed to help security teams prioritize investigations while providing tailored reporting for both technical and executive stakeholders.
 
-> **Note:** This repository represents an independent implementation of an AI-assisted security operations workflow intended for learning and portfolio purposes.
 
 ---
 
